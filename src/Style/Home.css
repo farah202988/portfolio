@@ -1,21 +1,24 @@
 /* ============= HOME CONTAINER ============= */
 .home-container {
   min-height: 100vh;
-  background: white;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   display: flex;
   flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ============= NAVBAR ============= */
 .home-navbar {
-  background: white;
-  border-bottom: 1px solid #f0f0f0;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
   padding: 18px 50px;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--navbar-shadow);
+  transition: background-color 0.3s ease;
 }
 
 .navbar-content {
@@ -31,9 +34,10 @@
   margin: 0;
   font-size: 1.15rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -0.5px;
   white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
 .nav-links {
@@ -50,7 +54,7 @@
 }
 
 .nav-links a {
-  color: #666;
+  color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
@@ -101,8 +105,8 @@
 }
 
 .logout-btn {
-  background: #1a1a1a;
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   border: none;
   padding: 10px 22px;
   border-radius: 4px;
@@ -116,6 +120,7 @@
 
 .logout-btn:hover {
   background: #0a66c2;
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
 }
@@ -155,10 +160,11 @@
 
 .hero-left p {
   font-size: 1.15rem;
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.8;
   margin: 0;
   font-weight: 400;
+  transition: color 0.3s ease;
 }
 
 /* ============= QUICK LINKS ============= */
@@ -188,14 +194,14 @@
 }
 
 .link-btn:last-child {
-  background: white;
+  background: transparent;
   color: #0a66c2;
   border: 2px solid #0a66c2;
   padding: 12px 30px;
 }
 
 .link-btn:last-child:hover {
-  background: #f0f0f0;
+  background: rgba(10, 102, 194, 0.1);
 }
 
 /* ============= HERO RIGHT ============= */
@@ -211,8 +217,9 @@
   aspect-ratio: 3/4;
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(135deg, #e6e6e6 0%, #f5f5f5 100%);
+  background: var(--bg-secondary);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.3s ease;
 }
 
 .profile-image img {
@@ -224,8 +231,9 @@
 /* ============= WHAT I DO SECTION ============= */
 .what-i-do-section {
   padding: 120px 50px;
-  background: white;
+  background: var(--bg-primary);
   margin-top: 80px;
+  transition: background-color 0.3s ease;
 }
 
 .what-i-do-header {
@@ -252,25 +260,19 @@
 .what-i-do-section h2 {
   font-size: 3.2rem;
   font-weight: 800;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 25px 0;
   letter-spacing: -1.2px;
+  transition: color 0.3s ease;
 }
 
 .section-description {
   font-size: 1.08rem;
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.85;
   margin: 0;
   font-weight: 400;
-}
-
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 60px;
-  max-width: 1000px;
-  margin: 0 auto;
+  transition: color 0.3s ease;
 }
 
 .skills-container {
@@ -282,12 +284,12 @@
 }
 
 .skill-box {
-  background: linear-gradient(135deg, #f9f9f9 0%, #f5f5f5 100%);
+  background: var(--bg-secondary);
   padding: 40px;
   border-radius: 12px;
   border-left: 5px solid #0a66c2;
   transition: all 0.4s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--card-shadow);
   position: relative;
   overflow: hidden;
 }
@@ -313,11 +315,12 @@
 .skill-box h3 {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 28px 0;
   position: relative;
   z-index: 1;
   letter-spacing: -0.5px;
+  transition: color 0.3s ease;
 }
 
 .skill-list-items {
@@ -332,7 +335,7 @@
 }
 
 .skill-list-items li {
-  color: #555;
+  color: var(--text-secondary);
   font-size: 0.97rem;
   line-height: 1.7;
   padding-left: 24px;
@@ -362,11 +365,12 @@
 
 /* ============= FOOTER ============= */
 .home-footer {
-  background: #1a1a1a;
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   padding: 40px 20px;
   text-align: center;
   margin-top: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .footer-content {
@@ -377,7 +381,8 @@
 .home-footer p {
   margin: 0 0 20px 0;
   font-size: 0.9rem;
-  color: #ccc;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 }
 
 .footer-links {
@@ -387,7 +392,7 @@
 }
 
 .footer-links a {
-  color: #ccc;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;

@@ -30,6 +30,12 @@ import crmDashboard2 from "./images/crmdashboard2.png";
 import crmDashboard3 from "./images/crmdashboard3.png";
 import crmDashboard4 from "./images/crmdashboard.png";
 
+import portfolioImg from "./images/portfolioImg.png";
+import portfolio1 from "./images/portfolio1.png";
+import portfolio2 from "./images/portfolio2.png";
+import portfolio3 from "./images/portfolio3.png";
+import portfolio4 from "./images/portfolio4.png";
+
 // Import des pages
 import Login from "./pages/Login";
 import Home from "./pages/Home";
@@ -47,7 +53,7 @@ function App() {
     {
       id: 1,
       title: "FarahMarket",
-      category: "Web",
+      category: "Sites Web",
       description: "Boutique en ligne des produits 100% tunisiennes avec design moderne et responsif.",
       fullDescription: "FarahMarket est une plateforme e-commerce dédiée à la vente de produits tunisiens authentiques. Conçue avec HTML5, CSS3 et Bootstrap pour une expérience utilisateur fluide et professionnelle.",
       image: farahMarketImg,
@@ -58,7 +64,7 @@ function App() {
     {
       id: 2,
       title: "Ecommerce Dashboard",
-      category: "Web",
+      category: "Dashboard",
       description: "A modern and responsive e-commerce dashboard designed to visualize key performance indicators.",
       fullDescription: "A modern and responsive e-commerce dashboard designed to visualize key performance indicators such as customers, orders, revenue, and monthly targets. The interface presents data through interactive charts and clean UI components inspired by professional analytics tools.",
       image: dashboardImg,
@@ -67,47 +73,47 @@ function App() {
       link: "#"
     },
     {
-  id: 3,
-  title: "Bright Ideas",
-  category: "React",
-  description: "Plateforme collaborative pour partager et explorer des idées novatrices avec la communauté.",
-  fullDescription: "Bright Ideas est une plateforme web développée avec React permettant aux utilisateurs de partager leurs idées créatives, de collaborer avec d'autres innovateurs et de participer à des projets collectifs. L'application offre une interface intuitive pour poster des idées, commenter, noter et suivre les projets en cours.",
-  image: brightIdeasImg,
-  gallery: [brightIdeas1, brightIdeas2, brightIdeas3, brightIdeas4],
-  technologies: ["React", "Node.js", "MongoDB", "Express", "JWT Authentication"],
-  link: "#"
-},
+      id: 3,
+      title: "Bright Ideas",
+      category: "Sites Web",
+      description: "Plateforme collaborative pour partager et explorer des idées novatrices avec la communauté.",
+      fullDescription: "Bright Ideas est une plateforme web développée avec React permettant aux utilisateurs de partager leurs idées créatives, de collaborer avec d'autres innovateurs et de participer à des projets collectifs. L'application offre une interface intuitive pour poster des idées, commenter, noter et suivre les projets en cours.",
+      image: brightIdeasImg,
+      gallery: [brightIdeas1, brightIdeas2, brightIdeas3, brightIdeas4],
+      technologies: ["React", "Node.js", "MongoDB", "Express", "JWT Authentication"],
+      link: "#"
+    },
     {
-  id: 4,
-  title: "My Weather App",
-  category: "React",
-  description: "Application météo interactive affichant les prévisions météorologiques en temps réel pour n'importe quelle ville.",
-  fullDescription: "My Weather App est une application React conçue pour afficher les conditions météorologiques actuelles et les prévisions pour les jours à venir. L'application intègre une API de météo, un système de recherche par ville et une interface intuitive avec des icônes météorologiques. Fonctionnalités: recherche par géolocalisation, historique des villes recherchées et affichage détaillé des prévisions.",
-  image: weatherAppImg,
-  gallery: [weatherApp1, weatherApp2, weatherApp3, weatherApp4],
-  technologies: ["React", "OpenWeather API", "Geolocation API", "JavaScript ES6+"],
-  link: "#"
-},
-
-  {
-    id: 5,
-    title: "CRM Dashboard",
-    category: "React",
-    description: "Tableau de bord CRM professionnel pour gérer les clients, les ventes et les interactions commerciales.",
-    fullDescription: "CRM Dashboard est une application React complète dédiée à la gestion des relations clients. Elle permet de visualiser et gérer l'ensemble du pipeline de ventes, tracker les interactions avec les clients, analyser les performances commerciales et générer des rapports détaillés. Interface intuitive avec graphiques interactifs, filtrage avancé et notifications en temps réel.",
-    image: crmDashboardImg,
-    gallery: [crmDashboard1, crmDashboard2, crmDashboard3, crmDashboard4],
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Chart.js", "Redux"],
-    link: "#"
-  },
+      id: 4,
+      title: "My Weather App",
+      category: "Sites Web",
+      description: "Application météo interactive affichant les prévisions météorologiques en temps réel pour n'importe quelle ville.",
+      fullDescription: "My Weather App est une application React conçue pour afficher les conditions météorologiques actuelles et les prévisions pour les jours à venir. L'application intègre une API de météo, un système de recherche par ville et une interface intuitive avec des icônes météorologiques. Fonctionnalités: recherche par géolocalisation, historique des villes recherchées et affichage détaillé des prévisions.",
+      image: weatherAppImg,
+      gallery: [weatherApp1, weatherApp2, weatherApp3, weatherApp4],
+      technologies: ["React", "OpenWeather API", "Geolocation API", "JavaScript ES6+"],
+      link: "#"
+    },
     {
+      id: 5,
+      title: "CRM Dashboard",
+      category: "Dashboard",
+      description: "Tableau de bord CRM professionnel pour gérer les clients, les ventes et les interactions commerciales.",
+      fullDescription: "CRM Dashboard est une application React complète dédiée à la gestion des relations clients. Elle permet de visualiser et gérer l'ensemble du pipeline de ventes, tracker les interactions avec les clients, analyser les performances commerciales et générer des rapports détaillés. Interface intuitive avec graphiques interactifs, filtrage avancé et notifications en temps réel.",
+      image: crmDashboardImg,
+      gallery: [crmDashboard1, crmDashboard2, crmDashboard3, crmDashboard4],
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Chart.js", "Redux"],
+      link: "#"
+    },
+        {
       id: 6,
-      title: "Dashboard Analytics",
+      title: "Portfolio Website",
       category: "React",
-      description: "Analytics dashboard with real-time data visualization and insights.",
-      fullDescription: "Tableau de bord avec graphiques interactifs.",
-      image: "https://via.placeholder.com/300x200?text=Project+6",
-      technologies: ["React", "Chart.js", "Node.js"],
+      description: "Personal portfolio website showcasing projects, skills, and contact information with dark mode support.",
+      fullDescription: "Un portfolio personnel moderne construit avec React, présentant mes projets, compétences et informations de contact. Inclut un système de mode sombre/clair, une navigation fluide et un design responsive.",
+      image: portfolioImg,
+      gallery: [portfolio1, portfolio2, portfolio3, portfolio4],
+      technologies: ["React", "CSS3", "React Router", "Dark Mode"],
       link: "#"
     }
   ]);

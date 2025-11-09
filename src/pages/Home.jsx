@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
+import DarkModeToggle from "../components/DarkModeToggle";
 import "../Style/Home.css";
+import portfolioImg from "../images/portfolio.png";
 
 export default function Home({ userEmail, onLogout }) {
   const navigate = useNavigate();
@@ -22,6 +24,7 @@ export default function Home({ userEmail, onLogout }) {
             <li><Link to="/contact">Contact</Link></li>
           </ul>
           <div className="user-section">
+            <DarkModeToggle />
             <span className="user-email">SIGN IN</span>
             <button className="logout-btn" onClick={handleLogout}>
               LOGOUT
@@ -49,7 +52,7 @@ My goal is to combine data analysis and web technologies to create useful, moder
 
           <div className="hero-right">
             <div className="profile-image">
-              <img src="https://via.placeholder.com/400x500?text=Your+Photo" alt="Profile" />
+              <img src={portfolioImg} alt="Profile" />
             </div>
           </div>
         </div>

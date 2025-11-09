@@ -1,21 +1,24 @@
 /* ============= PROJECTS CONTAINER ============= */
 .projects-container {
   min-height: 100vh;
-  background: white;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   display: flex;
   flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ============= NAVBAR ============= */
 .projects-navbar {
-  background: white;
-  border-bottom: 1px solid #f0f0f0;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
   padding: 18px 50px;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--navbar-shadow);
+  transition: background-color 0.3s ease;
 }
 
 .projects-navbar .navbar-content {
@@ -31,9 +34,10 @@
   margin: 0;
   font-size: 1.15rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -0.5px;
   white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
 .projects-navbar .nav-links {
@@ -46,7 +50,7 @@
 }
 
 .projects-navbar .nav-links a {
-  color: #666;
+  color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
@@ -91,8 +95,8 @@
 }
 
 .projects-navbar .logout-btn {
-  background: #1a1a1a;
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   border: none;
   padding: 10px 22px;
   border-radius: 4px;
@@ -105,6 +109,7 @@
 
 .projects-navbar .logout-btn:hover {
   background: #0a66c2;
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
 }
@@ -127,19 +132,21 @@
 .projects-header h1 {
   font-size: 3.2rem;
   font-weight: 800;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 20px 0;
   letter-spacing: -1.2px;
+  transition: color 0.3s ease;
 }
 
 .projects-description {
   font-size: 1.08rem;
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.85;
   margin: 0;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  transition: color 0.3s ease;
 }
 
 /* ============= SEARCH AND FILTERS SECTION ============= */
@@ -159,10 +166,12 @@
   width: 100%;
   max-width: 500px;
   padding: 14px 20px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--border-color);
   border-radius: 25px;
   font-size: 1rem;
   font-family: inherit;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   transition: all 0.3s ease;
 }
 
@@ -173,7 +182,7 @@
 }
 
 .search-input::placeholder {
-  color: #999;
+  color: var(--text-secondary);
 }
 
 /* ============= FILTERS SECTION ============= */
@@ -191,9 +200,9 @@
 }
 
 .filter-btn {
-  background: white;
-  color: #666;
-  border: 2px solid #e0e0e0;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  border: 2px solid var(--border-color);
   padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
@@ -222,16 +231,17 @@
 }
 
 .project-card {
-  background: white;
+  background: var(--bg-primary);
   border-radius: 12px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   transition: all 0.4s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
   height: 100%;
+  border: 1px solid var(--border-color);
 }
 
 .project-card:hover {
@@ -242,7 +252,7 @@
 .project-image {
   width: 100%;
   height: 220px;
-  background: linear-gradient(135deg, #e6e6e6 0%, #f5f5f5 100%);
+  background: var(--bg-secondary);
   overflow: hidden;
   position: relative;
 }
@@ -268,22 +278,24 @@
 .project-info h3 {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 12px 0;
   letter-spacing: -0.3px;
+  transition: color 0.3s ease;
 }
 
 .project-description {
-  color: #999;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0 0 20px 0;
   flex: 1;
+  transition: color 0.3s ease;
 }
 
 .see-details-btn {
-  background: #1a1a1a;
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
@@ -297,13 +309,14 @@
 
 .see-details-btn:hover {
   background: #0a66c2;
+  color: white;
   transform: translateY(-2px);
 }
 
 .no-projects {
   grid-column: 1 / -1;
   text-align: center;
-  color: #999;
+  color: var(--text-secondary);
   font-size: 1.1rem;
   padding: 40px;
 }
@@ -334,7 +347,7 @@
 }
 
 .modal-content {
-  background: white;
+  background: var(--bg-primary);
   border-radius: 16px;
   overflow: hidden;
   max-width: 600px;
@@ -361,11 +374,11 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background: white;
+  background: var(--bg-secondary);
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #999;
+  color: var(--text-secondary);
   width: 40px;
   height: 40px;
   display: flex;
@@ -377,14 +390,14 @@
 }
 
 .modal-close:hover {
-  background: #f5f5f5;
-  color: #1a1a1a;
+  background: var(--border-color);
+  color: var(--text-primary);
 }
 
 .modal-image {
   width: 100%;
   height: 300px;
-  background: linear-gradient(135deg, #e6e6e6 0%, #f5f5f5 100%);
+  background: var(--bg-secondary);
   overflow: hidden;
 }
 
@@ -401,9 +414,10 @@
 .modal-body h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 10px 0;
   letter-spacing: -0.5px;
+  transition: color 0.3s ease;
 }
 
 .modal-category {
@@ -414,10 +428,11 @@
 }
 
 .modal-description {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 25px;
+  transition: color 0.3s ease;
 }
 
 .modal-technologies {
@@ -425,10 +440,11 @@
 }
 
 .modal-technologies h4 {
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0 15px 0;
+  transition: color 0.3s ease;
 }
 
 .tech-tags {
@@ -438,7 +454,7 @@
 }
 
 .tech-tag {
-  background: #f0f0f0;
+  background: rgba(10, 102, 194, 0.1);
   color: #0a66c2;
   padding: 6px 14px;
   border-radius: 15px;
@@ -472,7 +488,7 @@
 
 .modal-btn-secondary {
   flex: 1;
-  background: white;
+  background: var(--bg-secondary);
   color: #0a66c2;
   padding: 12px 20px;
   border-radius: 6px;
@@ -483,22 +499,24 @@
 }
 
 .modal-btn-secondary:hover {
-  background: #f5f9ff;
+  background: rgba(10, 102, 194, 0.1);
 }
 
 /* ============= PROJECTS FOOTER ============= */
 .projects-footer {
-  background: #1a1a1a;
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   padding: 40px 20px;
   text-align: center;
   margin-top: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .projects-footer p {
   margin: 0 0 15px 0;
   font-size: 0.9rem;
-  color: #ccc;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 }
 
 .projects-footer .footer-links {
@@ -508,7 +526,7 @@
 }
 
 .projects-footer .footer-links a {
-  color: #ccc;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;

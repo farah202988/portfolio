@@ -1,21 +1,24 @@
 /* ============= CONTACT CONTAINER ============= */
 .contact-container {
   min-height: 100vh;
-  background: white;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   display: flex;
   flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ============= NAVBAR ============= */
 .contact-navbar {
-  background: white;
-  border-bottom: 1px solid #f0f0f0;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
   padding: 18px 50px;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--navbar-shadow);
+  transition: background-color 0.3s ease;
 }
 
 .contact-navbar .navbar-content {
@@ -31,9 +34,10 @@
   margin: 0;
   font-size: 1.15rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   letter-spacing: -0.5px;
   white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
 .contact-navbar .nav-links {
@@ -46,7 +50,7 @@
 }
 
 .contact-navbar .nav-links a {
-  color: #666;
+  color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
@@ -91,8 +95,8 @@
 }
 
 .contact-navbar .logout-btn {
-  background: #1a1a1a;
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   border: none;
   padding: 10px 22px;
   border-radius: 4px;
@@ -105,6 +109,7 @@
 
 .contact-navbar .logout-btn:hover {
   background: #0a66c2;
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
 }
@@ -127,19 +132,21 @@
 .contact-header h1 {
   font-size: 3.2rem;
   font-weight: 800;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 20px 0;
   letter-spacing: -1.2px;
+  transition: color 0.3s ease;
 }
 
 .contact-intro {
   font-size: 1.08rem;
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.85;
   margin: 0;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  transition: color 0.3s ease;
 }
 
 /* ============= CONTACT WRAPPER ============= */
@@ -150,28 +157,32 @@
   align-items: start;
 }
 
-/* ============= CONTACT INFO SECTION (NOIR) ============= */
+/* ============= CONTACT INFO SECTION ============= */
 .contact-info-section {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-radius: 16px;
   padding: 50px 40px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--card-shadow);
   position: sticky;
   top: 100px;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
 }
 
 .contact-info-header h2 {
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0 0 16px 0;
+  transition: color 0.3s ease;
 }
 
 .contact-info-header p {
-  color: #a0a0a0;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0 0 40px 0;
+  transition: color 0.3s ease;
 }
 
 .contact-details {
@@ -186,7 +197,8 @@
   align-items: center;
   gap: 20px;
   padding: 16px 0;
-  border-bottom: 1px solid #404040;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
 }
 
 .contact-detail-item:last-child {
@@ -196,7 +208,7 @@
 .contact-icon {
   width: 24px;
   height: 24px;
-  color: #ffffff;
+  color: #0a66c2;
   flex-shrink: 0;
 }
 
@@ -206,7 +218,7 @@
 }
 
 .contact-link {
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
@@ -214,21 +226,23 @@
 }
 
 .contact-link:hover {
-  color: #60a5fa;
+  color: #0a66c2;
 }
 
 /* ============= SOCIAL LINKS ============= */
 .social-links {
   margin-top: 40px;
   padding-top: 30px;
-  border-top: 1px solid #404040;
+  border-top: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
 }
 
 .social-links h3 {
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 20px 0;
+  transition: color 0.3s ease;
 }
 
 .social-icons {
@@ -239,12 +253,12 @@
 .social-icon {
   width: 40px;
   height: 40px;
-  background: #404040;
+  background: var(--border-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--text-primary);
   transition: all 0.3s ease;
   text-decoration: none;
 }
@@ -256,15 +270,18 @@
 
 .social-icon:hover {
   background: #0a66c2;
+  color: white;
   transform: translateY(-3px);
 }
 
 /* ============= CONTACT FORM SECTION ============= */
 .contact-form-section {
-  background: white;
+  background: var(--bg-secondary);
   border-radius: 16px;
   padding: 50px 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
 .contact-form {
@@ -274,15 +291,16 @@
 }
 
 .success-message {
-  background-color: #dbeafe;
-  color: #0a66c2;
-  border: 1px solid #bfdbfe;
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid #22c55e;
   padding: 15px;
   border-radius: 8px;
   font-weight: 500;
   text-align: center;
   font-size: 0.95rem;
   animation: slideDown 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 @keyframes slideDown {
@@ -309,25 +327,27 @@
 
 .form-group label {
   margin-bottom: 8px;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 600;
   font-size: 0.95rem;
+  transition: color 0.3s ease;
 }
 
 .form-group input,
 .form-group textarea {
   padding: 14px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--border-color);
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
   transition: all 0.3s ease;
-  background-color: white;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #999;
+  color: var(--text-secondary);
 }
 
 .form-group input:focus,
@@ -339,9 +359,9 @@
 
 .form-group input:disabled,
 .form-group textarea:disabled {
-  background-color: #f9f9f9;
+  background-color: var(--bg-secondary);
   cursor: not-allowed;
-  color: #999;
+  color: var(--text-secondary);
 }
 
 .form-group textarea {
@@ -375,17 +395,19 @@
 
 /* ============= FOOTER ============= */
 .contact-footer {
-  background: #1a1a1a;
-  color: white;
+  background: var(--text-primary);
+  color: var(--bg-primary);
   padding: 40px 20px;
   text-align: center;
   margin-top: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact-footer p {
   margin: 0 0 15px 0;
   font-size: 0.9rem;
-  color: #ccc;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 }
 
 .contact-footer .footer-links {
@@ -395,7 +417,7 @@
 }
 
 .contact-footer .footer-links a {
-  color: #ccc;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
