@@ -13,6 +13,22 @@ import dashboard1 from "./images/dashboard1.png";
 import dashboard2 from "./images/dashboard2.png";
 import dashboard3 from "./images/dashboard3.png";
 import dashboard4 from "./images/dashboard.png";
+import brightIdeasImg from "./images/brightideas.png";
+import brightIdeas1 from "./images/brightideas1.png";
+import brightIdeas2 from "./images/brightideas2.png";
+import brightIdeas3 from "./images/brightideas3.png";
+import brightIdeas4 from "./images/brightideas4.png";
+import weatherAppImg from "./images/weatherapp.png";
+import weatherApp1 from "./images/weatherapp1.png";
+import weatherApp2 from "./images/weatherapp2.png";
+import weatherApp3 from "./images/weatherapp3.png";
+import weatherApp4 from "./images/weatherapp.png";
+
+import crmDashboardImg from "./images/crmdashboard.png";
+import crmDashboard1 from "./images/crmdashboard1.png";
+import crmDashboard2 from "./images/crmdashboard2.png";
+import crmDashboard3 from "./images/crmdashboard3.png";
+import crmDashboard4 from "./images/crmdashboard.png";
 
 // Import des pages
 import Login from "./pages/Login";
@@ -51,35 +67,39 @@ function App() {
       link: "#"
     },
     {
-      id: 3,
-      title: "Landing Page Development",
-      category: "Web",
-      description: "Promotional landing page for a fitness website Summer Campaign. Form development included.",
-      fullDescription: "Landing page professionnelle avec formulaire de contact.",
-      image: "https://via.placeholder.com/300x200?text=Project+3",
-      technologies: ["HTML5", "CSS3", "JavaScript"],
-      link: "#"
-    },
+  id: 3,
+  title: "Bright Ideas",
+  category: "React",
+  description: "Plateforme collaborative pour partager et explorer des idées novatrices avec la communauté.",
+  fullDescription: "Bright Ideas est une plateforme web développée avec React permettant aux utilisateurs de partager leurs idées créatives, de collaborer avec d'autres innovateurs et de participer à des projets collectifs. L'application offre une interface intuitive pour poster des idées, commenter, noter et suivre les projets en cours.",
+  image: brightIdeasImg,
+  gallery: [brightIdeas1, brightIdeas2, brightIdeas3, brightIdeas4],
+  technologies: ["React", "Node.js", "MongoDB", "Express", "JWT Authentication"],
+  link: "#"
+},
     {
-      id: 4,
-      title: "Mobile App Development",
-      category: "React",
-      description: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-      fullDescription: "Application avec map intégrée et système de notation.",
-      image: "https://via.placeholder.com/300x200?text=Project+4",
-      technologies: ["React", "Google Maps API"],
-      link: "#"
-    },
-    {
-      id: 5,
-      title: "E-commerce development",
-      category: "JavaScript",
-      description: "Ecommerce website offering access to the latest and greatest gadgets and accessories.",
-      fullDescription: "Plateforme e-commerce avec panier et paiement.",
-      image: "https://via.placeholder.com/300x200?text=Project+5",
-      technologies: ["JavaScript", "Node.js", "Stripe API"],
-      link: "#"
-    },
+  id: 4,
+  title: "My Weather App",
+  category: "React",
+  description: "Application météo interactive affichant les prévisions météorologiques en temps réel pour n'importe quelle ville.",
+  fullDescription: "My Weather App est une application React conçue pour afficher les conditions météorologiques actuelles et les prévisions pour les jours à venir. L'application intègre une API de météo, un système de recherche par ville et une interface intuitive avec des icônes météorologiques. Fonctionnalités: recherche par géolocalisation, historique des villes recherchées et affichage détaillé des prévisions.",
+  image: weatherAppImg,
+  gallery: [weatherApp1, weatherApp2, weatherApp3, weatherApp4],
+  technologies: ["React", "OpenWeather API", "Geolocation API", "JavaScript ES6+"],
+  link: "#"
+},
+
+  {
+    id: 5,
+    title: "CRM Dashboard",
+    category: "React",
+    description: "Tableau de bord CRM professionnel pour gérer les clients, les ventes et les interactions commerciales.",
+    fullDescription: "CRM Dashboard est une application React complète dédiée à la gestion des relations clients. Elle permet de visualiser et gérer l'ensemble du pipeline de ventes, tracker les interactions avec les clients, analyser les performances commerciales et générer des rapports détaillés. Interface intuitive avec graphiques interactifs, filtrage avancé et notifications en temps réel.",
+    image: crmDashboardImg,
+    gallery: [crmDashboard1, crmDashboard2, crmDashboard3, crmDashboard4],
+    technologies: ["React", "Node.js", "MongoDB", "Express", "Chart.js", "Redux"],
+    link: "#"
+  },
     {
       id: 6,
       title: "Dashboard Analytics",
