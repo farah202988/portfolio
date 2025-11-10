@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../Style/Projects.css";
 
 export default function Projects({ projects, onLogout, userEmail }) {
   const [selectedCategory, setSelectedCategory] = useState("Tous");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProject, setSelectedProject] = useState(null);
-  const navigate = useNavigate();
 
   const categories = ["Tous", ...new Set(projects.map(p => p.category))];
   
@@ -22,11 +24,6 @@ export default function Projects({ projects, onLogout, userEmail }) {
     );
   }
 
-  const handleLogout = () => {
-    onLogout();
-    navigate("/login");
-  };
-
   const openModal = (project) => {
     setSelectedProject(project);
   };
@@ -37,33 +34,16 @@ export default function Projects({ projects, onLogout, userEmail }) {
 
   return (
     <div className="projects-container">
-      {/* Navbar */}
-      <nav className="projects-navbar">
-        <div className="navbar-content">
-          <h2>Mon Portfolio</h2>
-          <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-          <div className="user-section">
-            <span className="user-email">SIGN IN</span>
-            <button className="logout-btn" onClick={handleLogout}>
-              LOGOUT
-            </button>
-          </div>
-        </div>
-      </nav>
+      {/* Navbar Component */}
+      <Navbar userEmail={userEmail} onLogout={onLogout} />
 
       {/* Projects Content */}
       <main className="projects-content">
-        {/* Header Section */}
-        <section className="projects-header">
-          <h1>My Projects</h1>
-          <p className="projects-description">
-            Whether you have a mobile app idea that needs to come to life or a website that requires a facelift, I'm here to turn your digital dreams into reality.
-          </p>
-        </section>
+        {/* Header Component */}
+        <Header 
+          title="My Projects" 
+          subtitle="Whether you have a mobile app idea that needs to come to life or a website that requires a facelift, I'm here to turn your digital dreams into reality."
+        />
 
         {/* Search and Filters */}
         <section className="search-filters-section">
@@ -149,15 +129,8 @@ export default function Projects({ projects, onLogout, userEmail }) {
         </div>
       )}
 
-      {/* Footer */}
-      <footer className="projects-footer">
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
-        <div className="footer-links">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-        </div>
-      </footer>
+      {/* Footer Component */}
+      <Footer />
     </div>
   );
 }

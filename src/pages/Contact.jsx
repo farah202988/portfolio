@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../Style/Contact.css";
 
 export default function Contact({ onLogout, userEmail }) {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,11 +13,6 @@ export default function Contact({ onLogout, userEmail }) {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
-
-  const handleLogout = () => {
-    onLogout();
-    navigate("/login");
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,36 +46,19 @@ export default function Contact({ onLogout, userEmail }) {
 
   return (
     <div className="contact-container">
-      {/* Navbar */}
-      <nav className="contact-navbar">
-        <div className="navbar-content">
-          <h2>Mon Portfolio</h2>
-          <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-          <div className="user-section">
-            <span className="user-email">SIGN IN</span>
-            <button className="logout-btn" onClick={handleLogout}>
-              LOGOUT
-            </button>
-          </div>
-        </div>
-      </nav>
+      {/* Navbar Component */}
+      <Navbar userEmail={userEmail} onLogout={onLogout} />
 
       {/* Contact Content */}
       <main className="contact-content">
-        <div className="contact-header">
-          <h1>Contact</h1>
-          <p className="contact-intro">
-            Have a project in mind or just want to say hello? Feel free to reach out! 
-            I'm always open to discussing new projects, creative ideas, or opportunities.
-          </p>
-        </div>
+        {/* Header Component */}
+        <Header 
+          title="Contact" 
+          subtitle="Have a project in mind or just want to say hello? Feel free to reach out! I'm always open to discussing new projects, creative ideas, or opportunities."
+        />
 
         <div className="contact-wrapper">
-          {/* Contact Information - Section Noire */}
+          {/* Contact Information Section */}
           <div className="contact-info-section">
             <div className="contact-info-header">
               <h2>Contact Information</h2>
@@ -115,8 +94,6 @@ export default function Contact({ onLogout, userEmail }) {
                 <span className="contact-link">Bizerte</span>
               </div>
             </div>
-
-
           </div>
 
           {/* Contact Form */}
@@ -197,15 +174,8 @@ export default function Contact({ onLogout, userEmail }) {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="contact-footer">
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
-        <div className="footer-links">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-        </div>
-      </footer>
+      {/* Footer Component */}
+      <Footer />
     </div>
   );
 }

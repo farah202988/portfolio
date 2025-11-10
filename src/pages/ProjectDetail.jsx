@@ -1,63 +1,30 @@
 import React from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../Style/ProjectDetail.css";
 
 export default function ProjectDetail({ projects, onLogout, userEmail }) {
   const { id } = useParams();
-  const navigate = useNavigate();
   const project = projects.find(p => p.id === parseInt(id));
 
   if (!project) {
     return (
       <div className="project-detail-container">
-        <nav className="detail-navbar">
-          <div className="navbar-content">
-            <h2>Mon Portfolio</h2>
-            <ul className="nav-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Projects</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
-            <div className="user-section">
-              <span className="user-email">SIGN IN</span>
-              <button className="logout-btn" onClick={() => { onLogout(); navigate("/login"); }}>
-                LOGOUT
-              </button>
-            </div>
-          </div>
-        </nav>
+        <Navbar userEmail={userEmail} onLogout={onLogout} />
         <main className="detail-content">
           <h1>Project not found</h1>
           <Link to="/projects" className="btn-back">Back to Projects</Link>
         </main>
+        <Footer />
       </div>
     );
   }
 
-  const handleLogout = () => {
-    onLogout();
-    navigate("/login");
-  };
-
   return (
     <div className="project-detail-container">
-      {/* Navbar */}
-      <nav className="detail-navbar">
-        <div className="navbar-content">
-          <h2>Mon Portfolio</h2>
-          <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-          <div className="user-section">
-            <span className="user-email">SIGN IN</span>
-            <button className="logout-btn" onClick={handleLogout}>
-              LOGOUT
-            </button>
-          </div>
-        </div>
-      </nav>
+      {/* Navbar Component */}
+      <Navbar userEmail={userEmail} onLogout={onLogout} />
 
       {/* Content */}
       <main className="detail-content">
@@ -120,8 +87,6 @@ export default function ProjectDetail({ projects, onLogout, userEmail }) {
             </div>
           </section>
 
-          
-
           {/* Technologies */}
           <section className="detail-section">
             <h2>Technologies Used</h2>
@@ -163,15 +128,8 @@ export default function ProjectDetail({ projects, onLogout, userEmail }) {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="detail-footer">
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
-        <div className="footer-links">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-        </div>
-      </footer>
+      {/* Footer Component */}
+      <Footer />
     </div>
   );
 }

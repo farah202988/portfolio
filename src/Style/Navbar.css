@@ -1,0 +1,132 @@
+.navbar {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 18px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--navbar-shadow);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.navbar-content h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 6px 0;
+  display: inline-block;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0a66c2;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0a66c2;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-left: auto;
+}
+
+.user-email {
+  font-size: 0.95rem;
+  color: #0a66c2;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.6px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.logout-btn:hover {
+  background: #0a66c2;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  .navbar-content h2 {
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  .user-email {
+    display: none;
+  }
+
+  .logout-btn {
+    padding: 6px 12px;
+    font-size: 0.7rem;
+  }
+}

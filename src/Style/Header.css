@@ -1,0 +1,45 @@
+.page-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 20px 0;
+  letter-spacing: -1.2px;
+  transition: color 0.3s ease;
+}
+
+.header-subtitle {
+  font-size: 1.08rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin: 0;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.header-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .header-subtitle {
+    font-size: 1rem;
+  }
+}
