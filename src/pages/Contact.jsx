@@ -114,7 +114,7 @@ export default function Contact({ onLogout, userEmail }) {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John Doe"
+                    placeholder="Farah Bahri"
                     required
                     disabled={isSubmitting}
                   />
@@ -128,7 +128,7 @@ export default function Contact({ onLogout, userEmail }) {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
+                    placeholder="farah@example.com"
                     required
                     disabled={isSubmitting}
                   />

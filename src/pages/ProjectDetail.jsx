@@ -5,8 +5,8 @@ import Footer from "../components/Footer";
 import "../Style/ProjectDetail.css";
 
 export default function ProjectDetail({ projects, onLogout, userEmail }) {
-  const { id } = useParams();
-  const project = projects.find(p => p.id === parseInt(id));
+  const { id } = useParams();// Récupère l'ID de l'URL
+  const project = projects.find(p => p.id === parseInt(id));// Trouve le projet correspondant
 
   if (!project) {
     return (

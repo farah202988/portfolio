@@ -119,9 +119,11 @@ function App() {
   ]);
 
   // Fonction pour se connecter
+  //Appelée par: Login.jsx quand la connexion réussit
+//Effet: Déverrouille l'accès aux pages protégées
   const handleLogin = (email) => {
-    setUserEmail(email);
-    setIsLoggedIn(true);
+    setUserEmail(email);// Sauvegarde l'email
+    setIsLoggedIn(true); // Active la connexion
   };
 
   // Fonction pour se déconnecter

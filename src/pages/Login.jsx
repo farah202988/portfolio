@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";//useNavigate : Hook pour rediriger vers d'autres pages
 import "../Style/Login.css";
 
 export default function Login({ onLogin, isLoggedIn }) {
@@ -38,7 +38,7 @@ export default function Login({ onLogin, isLoggedIn }) {
 
   // Validation et soumission du formulaire
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault();// Évite le rechargement de la page
     setError("");
     setSuccess("");
 
@@ -86,7 +86,7 @@ export default function Login({ onLogin, isLoggedIn }) {
       onLogin(email);
       // Rediriger vers la page d'accueil
       navigate("/");
-      setLoading(false);
+      setLoading(false);//Appelle la fonction du parent (App.js)
     }, 1500);
   };
 

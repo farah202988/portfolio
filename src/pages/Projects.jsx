@@ -11,7 +11,10 @@ export default function Projects({ projects, onLogout, userEmail }) {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const categories = ["Tous", ...new Set(projects.map(p => p.category))];
-  
+  //Si selectedCategory vaut "Tous" → on prend tous les projets (projects)
+
+//Sinon → on applique un filtre pour ne garder que les projets qui correspondent à la catégorie sélectionnée
+//projects.filter(p => p.category === selectedCategory):La méthode filter crée un nouveau tableau avec seulement les projets dont p.category est égal à selectedCategory.
   let filteredProjects = selectedCategory === "Tous" 
     ? projects 
     : projects.filter(p => p.category === selectedCategory);

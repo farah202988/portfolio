@@ -8,13 +8,13 @@ export default function Footer() {
       <div className="footer-content">
         <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
         <div className="footer-links">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/bahri-farah-191555345/" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/farah202988" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/farahbh395785" target="_blank" rel="noopener noreferrer">
             Twitter
           </a>
         </div>
