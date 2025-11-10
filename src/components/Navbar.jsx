@@ -1,5 +1,6 @@
 // src/components/Navbar.jsx
 import React from "react";
+import "../Style/Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import DarkModeToggle from "./DarkModeToggle";
 

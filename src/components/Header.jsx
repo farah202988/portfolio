@@ -1,5 +1,6 @@
 // src/components/Header.jsx
 import React from "react";
+import "../Style/Header.css";
 
 export default function Header({ title, subtitle, children }) {
   return (
